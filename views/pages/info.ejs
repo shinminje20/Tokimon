@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/info.css">
+    <script src="../index.js"></script>
+    <script src="/js/info.js"></script>
+    <title>Info</title>
+  </head>
+  
+  <body>
+      <% rows.forEach((r) => { %>
+        <input id="toki_height" type="text" value="<%- r.height %>">
+        <input id="toki_weight" type="text" value="<%- r.weight %>">
+        <div id="Attribute" class="Attribute">
+            <div id="header"><%= r.name %>'s Info</div>
+            <p id="para">All Infomation about <%= r.name %></p>
+        </div>
+        
+        <div id="given_form">
+            
+            <div id="image_block">
+              Name: <b type="text" id="nameOfTokimon" name="" value="<%- r.name%>"><%= r.name %></b><br>
+              
+                  <div id="tokki_image"  class="inner_content">
+                    <script>defaultSet();</script>
+                  </div>
+              
+            </div>
+
+            <div id="ability_block">
+                <h4>Details: </h4>
+                <table class="detail_table">
+                 <tr>
+                    <th>Height</th>
+                    <th>Weight</th>
+                    <th>Fly</th>
+                    <th>Fight</th>
+                    <th>Fire</th>
+                    <th>Water</th>
+                    <th>Electric</th>
+                    <th>Frozen</th>
+                    <th>Teleport</th>
+                    <th>Time Travel</th>
+                  </tr>
+                  <tr>
+                      <td><li id="li2"><%= r.height %></li></td>
+                      <td><li id="li3"><%= r.weight %></li></td>
+                      <td><li id="li4"><%= r.fly %></li></td>
+                      <td><li id="li5"><%= r.fight %></li></td>
+                      <td><li id="li6"><%= r.fire %></li></td>
+                      <td><li id="li7"><%= r.water %></li></td>
+                      <td><li id="li8"><%= r.electric %></li></td>
+                      <td><li id="li9"><%= r.frozen %></li></td>
+                      <td><li id="li10"><%= r.teleport %></li></td>
+                      <td><li id="li11"><%= r.timetravel %></li></td>
+                </table>
+                <br><br>Total: <b><%= r.total %></b>
+            </div>
+            
+        </div>
+        <% }); %>
+      
+  </body>
+  
+</html>

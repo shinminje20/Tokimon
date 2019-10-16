@@ -1,0 +1,114 @@
+body{
+    /* background-size: 170% auto; */
+    /* background-color: #cccccc; */
+    font-family: "Lato", sans-serif;
+  }
+#info_link{
+    display: none;
+  }
+  #info_toki{
+    display: block;
+  }
+  li{
+    list-style-type: none;
+  }
+  #header{
+    text-align: center;
+  }
+.data_table{
+    table-layout: fixed;
+    width: 100%;
+    
+}
+.data_table td{
+    text-align: center;
+    padding: 10px 0;
+    border-style: solid;
+    border-color:  #CD9D3E;
+    border-width: 0px 0px 2px 0px;
+}
+
+.data_table th{
+    border: 2px solid #CD9D3E;
+  }
+
+  .proceed_btn{
+    background-color: white;
+    border: 2px solid #CD9D3E;
+    border-radius: 20%;
+    padding: 10px 20px;
+    width: 60%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #CD9D3E;
+    text-align: center;
+    text-decoration: none;
+    /* box-shadow: ; */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .proceed_btn:hover{
+    background-color: #CD9D3E;
+    color: white;
+  }
+  .content{
+    position:absolute;
+    color: black;
+    /* margin: auto; */
+    /* display: none; */
+    padding: 0.1%;
+    /* text-align: center; */
+    text-overflow: clip;
+    word-wrap: break-word;
+    /* bottom: 0px; */
+    margin-top: 5%;
+    margin-left: 3.5%;
+    border-style: solid;
+    border-radius: 5%;
+  
+  }
+  .tabcontent {
+    color: white;
+    /* display:  */
+    padding: 0.1%;
+    text-align: center;
+  }
+
+  .option_content{
+    color: black;
+    display: none;
+    padding: 0.1%;
+    /* text-align: center; */
+    width: 70%;
+    /* border: 5px solid red; */
+  }
+
+  #TOKIMONS {background-color:#CD9D3E;}
+
+  #TOKIMONS_content {
+    border-color:#CD9D3E;
+    overflow-y: scroll;
+    width: 60%;
+    height: 55%;
+  }
+
+.tablink {
+    background-color: rgb(107, 106, 106);
+    color: white;
+    float: left;
+    border: none;
+    /* outline: none; */
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 17px;
+    /* height: 1; */
+    width: 50%;
+  }
+
+  #manage_tab {background-color:#CD9D3E;}
+  #TOKIMONS_form{
+      position: absolute;
+    width: 40%;
+    margin-top: 2%;
+    left: 67%;
+  }

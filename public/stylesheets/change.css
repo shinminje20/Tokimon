@@ -1,0 +1,89 @@
+
+#tokimon_name{
+    font-size: 50px;
+    text-align: center;
+}
+
+#header{
+    font-size: 60px;
+ text-align: center;
+}
+#para{
+    font-size: 20px;
+}
+#Attribute {
+    color: white;
+    display: none;
+    padding: 0.1%;
+
+    text-align: center;
+    
+    display: block;
+    background-color:rgb(62, 205, 181);
+    /* display: inline-block; */
+}
+#change_form{
+    position: absolute;
+    left: 60%;
+    padding: 2%;
+    display: inline-block;
+    background-color:white;
+}
+#given_form{
+    border-radius: 5%;
+    position: absolute;
+    font-size: 30px;
+    margin-top: 3%;
+    left: 3.5%;
+    height: 30%;
+    width: 46%;
+    padding: 2%;
+    display: inline-block;
+    border: 2px solid rgb(62, 205, 181);
+}
+li{
+    list-style-type: none;
+}
+#name{
+    font-size: 20px;
+}
+table th td{
+    padding: 10x 0;
+    border: 1px solid rgb(62, 205, 181);
+    /* border-collapse: separate; */
+    /* border-spacing: 10 10px; */
+}
+#applyChange_btn{
+    background-color: white;
+  border: 2px solid rgb(62, 205, 181);
+  border-radius: 20%;
+  padding: 10px 20px;
+  width: 85%;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(62, 205, 181);
+  text-align: center;
+  text-decoration: none;
+  /* box-shadow: ; */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+#applyChange_btn:hover{
+    background-color: rgb(62, 205, 181);
+    color: white;
+}
+#trigger{
+    display: none;
+}
+#change_name{
+    display: none;
+}
+#nameOfTokimon{
+    font-size: 25px;
+}
+/* #moddify_name{
+    display: none;
+} */
+/* td{
+    padding: 10x 0;
+} */

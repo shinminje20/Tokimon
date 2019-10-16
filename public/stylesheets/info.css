@@ -1,0 +1,79 @@
+#tokimon_name{
+    font-size: 50px;
+    text-align: center;
+}
+#header{
+    font-size: 60px;
+ text-align: center;
+}
+#para{
+    font-size: 20px;
+}
+#Attribute {
+    color: white;
+    display: none;
+    padding: 0.1%;
+
+    text-align: center;
+    
+    display: block;
+    background-color: rgb(42, 143, 22);
+    /* display: inline-block; */
+}
+
+#given_form{
+    border-radius: 5%;
+    position: absolute;
+    font-size: 30px;
+    margin-top: 3%;
+    left: 2%;
+    right: 2%;
+    height: 55%;
+    /* width: 93%; */
+    padding: 2%;
+    /* display: inline-block; */
+    border: 2px solid rgb(42, 143, 22);
+}
+#tokki_image{
+
+    /* position: absolute; */
+    margin-top: 2%;
+    background-color: grey;
+    width: 10%;
+    height: 10%;
+    /* border: 2px solid red; */
+}
+#image_block{
+    width: 37%;
+    height: 100%;
+    display: inline-block;
+    /* border: 2px solid red; */
+}
+#ability_block{
+    position: absolute;
+    padding: 3%;
+    left: 40%;
+    width: 56%;
+    height: 70%;
+    border: 2px solid rgb(42, 143, 22);;
+    border-width: 0px 0px 0px 2px;
+    display: inline-block;
+}
+li{
+    list-style-type: none;
+}
+.detail_table{
+    table-layout: fixed;
+    width: 100%;
+    font-size: 17px;
+}
+.detail_table td{
+    text-align: center;
+  padding: 10px 0;
+  border-style: solid;
+  border-color:  rgb(42, 143, 22);
+  border-width: 0px 0px 2px 0px;
+}
+.detail_table th{
+    border: 2px solid rgb(42, 143, 22);
+}

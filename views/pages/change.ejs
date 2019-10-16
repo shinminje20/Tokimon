@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/change.css">
+    <script src="../index.js"></script>
+    <title>Change</title>
+  </head>
+  <body>
+        <% rows.forEach((r) => { %> 
+        <div id="Attribute" class="Attribute">
+            <div id="header"><%= r.name %></div>
+            <!-- <h3>Tokimon Modification</h3> -->
+            <p id="para">Change Attribute as You GO</p>
+        </div>
+        
+          <!-- <div id="tokimon_name">
+            <tr><td><li id="li1">Tokimon Name: <%= r.name %></li></td></div> -->
+        <div id="given_form">
+        
+          <table>
+            <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr>
+                <td>Height: <%= r.height %></td>
+                <td>Weight: <%= r.weight %></td>
+                <td>Fly: <%= r.fly %></td>
+            </tr>
+            <tr>
+                <td>Fight: <%= r.fight %></td>
+                <td>Fire: <%= r.fire %></td>
+                <td>Water: <%= r.water %></td>
+            </tr>
+            <tr>
+                <td>Electric: <%= r.electric %></td>
+                <td>Frozen: <%= r.frozen %></td>
+                <td>Teleport: <%= r.teleport %></td>
+            </tr>
+            <tr>
+                <td>Time Travel: <%= r.timetravel %></td>
+                <td>Total: <%= r.total %></td>
+            </tr>
+            <!-- <th></th>
+            <th></th>
+            <th></th>
+            <th></th> -->
+            <!-- <td>Height: <%= r.height %><br>
+            Weight: <%= r.weight %><br>
+            Fly: <%= r.fly %><br>
+            <td>Fight: <%= r.fight %><br>
+            Fire: <%= r.fire %><br>
+            Water: <%= r.water %><br></td>
+            <td>Electric: <%= r.electric %><br>
+            Frozen: <%= r.frozen %><br>
+            Teleport: <%= r.teleport %></td>
+            <td>Time Travel: <%= r.timetravel %><br>
+            Total: <%= r.total %></td></tr> -->
+          </table>
+        </div>
+        <form action="/change" method="post" > 
+        <div>
+          <input id="trigger" name="trigger" type="text" value="0">
+        </div>
+        <div id="change_form" class="change_content">
+        
+          <h1>Modify</h1>
+          <div id="moddify_name">
+          <!-- Name: <%= r.name %> -->
+          <input type="text" id="change_name" name="change_name" value="<%- r.name%>">
+          Name: <b type="text" id="nameOfTokimon" name="" value="<%- r.name%>"><%= r.name %></b>
+          </div><br>
+          <!-- Height: <input id="height_in" value="<%- r.height%>" name="tokimon_height" type="text"><br>
+          Weight: <%= r.weight %> => <input type="text" name="tokimon_weight"><br> -->
+
+          
+          Height: <input class="data" name="change_height" id="tokimonHeight" type="range" onchange="tokiResize()" min="0" max="100" value="<%- r.height%>" oninput="tokimonHeight_output.value = tokimonHeight.value">: <output id="tokimonHeight_output" name="result"><%= r.height %></output> (cm)
+          
+          , Weight: <input class="data" name="change_weight" id="tokimonWeight" type="range" onchange="tokiResize()" min="0" max="100" value="<%- r.weight%>" oninput="tokimonWeight_output.value = tokimonWeight.value">: <output id="tokimonWeight_output" name="result"><%= r.weight %></output> (kg)<br>
+          
+          <h4>Ability:</h4>
+          
+          Fly: <input class="data" id="fly_inputId" type="range" name="change_fly" min="0" max="100" value="<%- r.fly%>" oninput="fly_outputId.value = fly_inputId.value">: <output id="fly_outputId" name="result"><%= r.fly%></output>,
+          Fight: <input class="data" id="fight_inputId" type="range" name="change_fight" min="0" max="100" value="<%- r.fight%>" oninput="fight_outputId.value = fight_inputId.value">: <output id="fight_outputId" name="result"><%= r.fight%></output><br>
+          Fire: <input class="data" id="fire_inputID" type="range" name="change_fire" min="0" max="100" value="<%- r.fire%>" oninput="fire_outputID.value = fire_inputID.value">: <output id="fire_outputID" name="result"><%= r.fire%></output>,
+          Water: <input class="data" id="water_inputID" type="range" name="change_water" min="0" max="100" value="<%- r.water%>" oninput="water_outputID.value = water_inputID.value">: <output id="water_outputID" name="result"><%= r.water%></output><br>
+          Electric: <input class="data" id="electric_inputID" type="range" name="change_electric" min="0" max="100" value="<%- r.electric%>" oninput="electric_outputID.value = electric_inputID.value">: <output id="electric_outputID" name="result"><%= r.electric%></output>,
+          Frozen: <input class="data" id="frozen_inputID" type="range" name="change_frozen" min="0" max="100" value="<%- r.frozen%>" oninput="frozen_outputID.value = frozen_inputID.value">: <output id="frozen_outputID" name="result"><%= r.frozen%></output><br>
+          Teleport Range: <input class="data" id="teleport_inputID" type="range" name="change_teleport" min="0" max="100" value="<%- r.teleport%>" oninput="teleport_outputID.value = teleport_inputID.value">: <output id="teleport_outputID" name="result"><%= r.teleport%></output> (km),
+          Time Travel: <input class="data" id="time_inputID" type="range" name="change_time" min="0" max="100" value="<%- r.timetravel%>" oninput="time_outputID.value = time_inputID.value">: <output id="time_outputID" name="result"><%= r.timetravel%></output> (min)<br>
+          <br>
+        
+          <button id="applyChange_btn" type="submit" name="button" >Apply Change</button>
+          
+        <% }); %>
+        </form>
+        </div>
+      
+  </body>
+</html>
+
+<!--   
+<% rows.forEach((r) => { %> 
+    <div id="change_form" class="change_content">
+      <form action="/" method="post" onsubmit="setTimeout(function(){window.location.reload();},10)">
+        <h1>Profile</h1>
+        
+        Height: <input class="data" name="tokimon_height" id="tokimonHeight" type="range" onchange="tokiResize()" min="0" max="100" value="r.height" oninput="tokimonHeight_output.value = tokimonHeight.value">: <output id="tokimonHeight_output" name="result">0</output> (cm)
+        
+        , Weight: <input class="data" name="tokimon_weight" id="tokimonWeight" type="range" onchange="tokiResize()" min="0" max="100" value="r.weight" oninput="tokimonWeight_output.value = tokimonWeight.value">: <output id="tokimonWeight_output" name="result">0</output> (kg)<br>
+        
+        <h4>Ability:</h4>
+        Fly: <input class="data" id="fly_inputId" type="range" name="tokimon_fly" min="0" max="100" value="r.fly" oninput="fly_outputId.value = fly_inputId.value">: <output id="fly_outputId" name="result">0</output>,
+        Fight: <input class="data" id="fight_inputId" type="range" name="tokimon_fight" min="0" max="100" value="r.fight" oninput="fight_outputId.value = fight_inputId.value">: <output id="fight_outputId" name="result">0</output><br>
+        Fire: <input class="data" id="fire_inputID" type="range" name="tokimon_fire" min="0" max="100" value="r.fire" oninput="fire_outputID.value = fire_inputID.value">: <output id="fire_outputID" name="result">0</output>,
+        Water: <input class="data" id="water_inputID" type="range" name="tokimon_water" min="0" max="100" value="r.water" oninput="water_outputID.value = water_inputID.value">: <output id="water_outputID" name="result">0</output><br>
+        Electric: <input class="data" id="electric_inputID" type="range" name="tokimon_electric" min="0" max="100" value="r.electric" oninput="electric_outputID.value = electric_inputID.value">: <output id="electric_outputID" name="result">0</output>,
+        Frozen: <input class="data" id="frozen_inputID" type="range" name="tokimon_frozen" min="0" max="100" value="r.frozen" oninput="frozen_outputID.value = frozen_inputID.value">: <output id="frozen_outputID" name="result">0</output><br>
+        Teleport Range: <input class="data" id="teleport_inputID" type="range" name="tokimon_teleport" min="0" max="100" value="r.teleport" oninput="teleport_outputID.value = teleport_inputID.value">: <output id="teleport_outputID" name="result">0</output> (km),
+        Time Travel: <input class="data" id="time_inputID" type="range" name="tokimon_time" min="0" max="100" value="r.time" oninput="time_outputID.value = time_inputID.value">: <output id="time_outputID" name="result">0</output> (min)<br>
+        <br>
+        <button id="apply_btn" type="submit" name="button">Apply Modification</button>
+      </form>
+    </div>
+    <% }); %> -->

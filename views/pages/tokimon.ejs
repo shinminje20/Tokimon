@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/tokimon.css">
+    <script src="../index.js"></script>
+    
+    <title>Add</title>
+  </head>
+  <body>
+    <div class="tokki1"></div>
+    <div class="tokki2"></div>
+
+    <div id="ADD" class="tabcontent">
+      <h1 id="header">Tokimon World</h1>
+      <h2>ADD</h2>
+      <p>Add Tokimon Here</p>
+    </div>
+
+    <button id="ADD_tab" class="tablink" id="defaultOpen" onclick="setTimeout(function(){window.location.reload();},10)" >ADD</button>
+    <form id="toManage" action="/manage">
+      <a href="javascript:{}" onclick="document.getElementById('toManage').submit(); return false;"><button class="tablink">TOKIMONS</button></a>
+    </form>
+    <div id="outer_content">
+      <div id="ADD_content" class="content">
+          <div id="image" class="inner_content">
+            <img id="tokimon_image"src="../images/add_tokki.png" alt="">
+          </div>
+      </div>
+
+      <div id="ADD_form" class="form_content">
+        <form action="/db" method="post" onsubmit="setTimeout(function(){window.location.reload();},10)">
+          <h1>Profile</h1>
+          Name: <input class="data" type="text" placeholder="ex) Crazy Tokki" name="tokimon_name" value=""><br>
+          Height: <input class="data" name="tokimon_height" id="tokimonHeight" type="range" onchange="tokiResize()" min="0" max="100" value="0" oninput="tokimonHeight_output.value = tokimonHeight.value">: <output id="tokimonHeight_output" name="result">0</output> (cm)
+          
+          , Weight: <input class="data" name="tokimon_weight" id="tokimonWeight" type="range" onchange="tokiResize()" min="0" max="100" value="0" oninput="tokimonWeight_output.value = tokimonWeight.value">: <output id="tokimonWeight_output" name="result">0</output> (kg)<br>
+          
+          <h4>Ability:</h4>
+          Fly: <input class="data" id="fly_inputId" type="range" name="tokimon_fly" min="0" max="100" value="0" oninput="fly_outputId.value = fly_inputId.value">: <output id="fly_outputId" name="result">0</output>,
+          Fight: <input class="data" id="fight_inputId" type="range" name="tokimon_fight" min="0" max="100" value="0" oninput="fight_outputId.value = fight_inputId.value">: <output id="fight_outputId" name="result">0</output><br>
+          Fire: <input class="data" id="fire_inputID" type="range" name="tokimon_fire" min="0" max="100" value="0" oninput="fire_outputID.value = fire_inputID.value">: <output id="fire_outputID" name="result">0</output>,
+          Water: <input class="data" id="water_inputID" type="range" name="tokimon_water" min="0" max="100" value="0" oninput="water_outputID.value = water_inputID.value">: <output id="water_outputID" name="result">0</output><br>
+          Electric: <input class="data" id="electric_inputID" type="range" name="tokimon_electric" min="0" max="100" value="0" oninput="electric_outputID.value = electric_inputID.value">: <output id="electric_outputID" name="result">0</output>,
+          Frozen: <input class="data" id="frozen_inputID" type="range" name="tokimon_frozen" min="0" max="100" value="0" oninput="frozen_outputID.value = frozen_inputID.value">: <output id="frozen_outputID" name="result">0</output><br>
+          Teleport Range: <input class="data" id="teleport_inputID" type="range" name="tokimon_teleport" min="0" max="100" value="0" oninput="teleport_outputID.value = teleport_inputID.value">: <output id="teleport_outputID" name="result">0</output> (km),
+          Time Travel: <input class="data" id="time_inputID" type="range" name="tokimon_time" min="0" max="100" value="0" oninput="time_outputID.value = time_inputID.value">: <output id="time_outputID" name="result">0</output> (min)<br>
+          <br>
+          <button id="apply_btn" type="submit" name="button">Add Tokimon</button>
+        </form>
+      </div>
+
+      
+      
+    </div>
+
+  </body>
+  <script src="js/tokimon.js"></script>
+</html>

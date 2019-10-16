@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/manage.css">
+    <script src="../index.js"></script>
+    
+    <title>Manage</title>
+  </head>
+  <body>
+    <div class="tokki1"></div>
+    <div class="tokki2"></div>
+
+    <div id="TOKIMONS" class="tabcontent">
+      <h1 id="header">Tokimon World</h1>
+      <h2>TOKIMONS</h2>
+      <p>Manage All Tokimons</p>
+    </div>
+    
+    <form id="toAdd" action="/">
+        <a href="javascript:{}" onclick="document.getElementById('toManage').submit(); return false;"><button class="tablink" >ADD</button></a>
+    </form>
+    <button id="manage_tab" class="tablink" onclick="setTimeout(function(){window.location.reload();},10)">TOKIMONS</button>
+    <div id="outer_content">
+      
+
+      <div id="TOKIMONS_content" class="content">
+        <table class="data_table">
+          <tr>
+            <th>Name</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>Fly</th>
+            <th>Fight</th>
+            <th>Fire</th>
+            <th>Water</th>
+            <th>Electric</th>
+            <th>Frozen</th>
+            <th>Teleport</th>
+            <th>Time Travel</th>
+            <th>Total</th>
+          </tr>
+          <tr>
+            <% rows.forEach((r) => { %> 
+              <tr><td><li id="li1"><%= r.name %></li></td>
+              <td><li id="li2"><%= r.height %></li></td>
+              <td><li id="li3"><%= r.weight %></li></td>
+              <td><li id="li4"><%= r.fly %></li></td>
+              <td><li id="li5"><%= r.fight %></li></td>
+              <td><li id="li6"><%= r.fire %></li></td>
+              <td><li id="li7"><%= r.water %></li></td>
+              <td><li id="li8"><%= r.electric %></li></td>
+              <td><li id="li9"><%= r.frozen %></li></td>
+              <td><li id="li10"><%= r.teleport %></li></td>
+              <td><li id="li11"><%= r.timetravel %></li></td>
+              <td><li id="li12"><%= r.total %></li></td></tr>
+            <% }); %>
+           
+          </tr>
+        </table>
+        
+      </div>
+      
+      <div id="TOKIMONS_form" class="form_content">
+          
+        <h1>Manage Tokimon</h1>
+          
+        <form action="/db" method="post" name="option_form" onsubmit="setTimeout(function(){window.location.reload();},10)">
+            Options: 
+            <select name="selection" id="selection" onchange="showOption();">
+              <option  value="none">None</option>
+              <option id="delete_op" value="delete">Delete Tokimon</option>
+              <option id="info_op" value="info">More Info</option>
+              <option id="change_op" value="change">Change Ability</option>
+            </select>
+            <br>
+            
+              
+          <div id="none" class="option_content"></div>
+          <div id="delete" class="option_content">
+            Tokimon Name: <input name="manage_name" type="text" placeholder="ex)Crazy Mon"><br>
+            <button class="proceed_btn" type="submit" name="button">Delete Tokimon</button>
+          </div>
+        </form>
+        <div id="info" class="option_content">
+            <form id="moreinfo" action="/info" method="post" name="option_form">
+            Tokimon Name: <input name="manage_name" type="text" placeholder="ex)Crazy Mon"><br>
+            
+            <button id="info_toki" class="proceed_btn" type="button" name="button" onclick="getLink();">Get Link</button>
+            <div id="info_link">
+              <a href="javascript:{}" onclick="document.getElementById('moreinfo').submit(); return false;">https://tokimon-world.herokuapp.com/info</a>
+            </div>
+          </form>
+        </div>
+
+        <div id="change" class="option_content">
+          <form action="/change" method="post" name="option_form">
+            Tokimon Name: <input name="manage_name" type="text" placeholder="ex)Crazy Mon"><br>
+            <button id="search_toki" class="proceed_btn" type="submit" name="button" onclick="displayChange();">Modify Tokimon</button>
+          </form>
+        </div>
+        </div>
+
+  </body>
+  <script src="js/manage.js"></script>
+</html>

@@ -1,0 +1,311 @@
+body{
+  /* background-size: 170% auto; */
+  /* background-color: #cccccc; */
+  font-family: "Lato", sans-serif;
+}
+
+#header{
+  text-align: center;
+}
+
+/* li{
+  list-style-type: none;
+} */
+/* #li1{
+  list-style-type: decimal;
+} */
+
+.tokki1{
+  position: absolute;
+  /* bottom: 100px; */
+  background-image: url("/images/tokki_normal.png");
+  background-size: contain;
+  /* background-color: #cccccc; */
+  display: inline;
+  width: 312px;
+  height: 100px;
+  bottom: 10px;
+}
+
+/* #info_link{
+  display: none;
+}
+#info_toki{
+  display: block;
+} */
+
+.tokki2{
+  position: absolute;
+  right: 0px;
+  /* bottom: 100px; */
+  background-image: url("http://localhost:5000/images/tokki_normal.png");
+  background-size: contain;
+  /* background-color: #cccccc; */
+  display: inline;
+  transform: rotateY(180deg);
+  width: 312px;
+  height: 100px;
+  bottom: 10px;
+}
+
+/* ============================================= */
+
+.tablink {
+  background-color: rgb(107, 106, 106);
+  color: white;
+  float: left;
+  border: none;
+  /* outline: none; */
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 17px;
+  /* height: 1; */
+  width: 50%;
+}
+/* .data_table{
+  table-layout: fixed;
+  width: 100%;
+  
+} */
+/* .data_table td{
+  text-align: center;
+  padding: 10px 0;
+  border-style: solid;
+  border-color:  #CD9D3E;
+  border-width: 0px 0px 2px 0px;
+}
+.data_table th{
+  border: 2px solid #CD9D3E;
+} */
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  color: white;
+  /* display:  */
+  padding: 0.1%;
+  text-align: center;
+}
+#tokimon_image{
+  background-color: rgb(107, 106, 106);
+  /* top: 100%; */
+  /* margin-bottom: 10%; */
+  position: absolute;
+  padding: 3%;
+  /* bottom: 15%; */
+  left: 5%;
+  width: 10%;
+  height: 10%;
+  bottom: 0;
+  /* top: 50%; */
+   margin: 0 auto;
+   margin-left: auto;
+  margin-right: auto;
+   display: block;
+  /* text-align: center; */
+  /* margin-top: 50%; */
+  /* border: 2px solid red; */
+}
+#apply_btn{
+  background-color: white;
+  border: 2px solid #CD3E3E;
+  border-radius: 20%;
+  padding: 10px 20px;
+  width: 85%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #CD3E3E;
+  text-align: center;
+  text-decoration: none;
+  /* box-shadow: ; */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+#apply_btn:hover{
+  background-color: #CD3E3E;
+  color: white;
+}
+/* 
+.proceed_btn{
+  background-color: white;
+  border: 2px solid #CD9D3E;
+  border-radius: 20%;
+  padding: 10px 20px;
+  width: 60%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #CD9D3E;
+  text-align: center;
+  text-decoration: none;
+  /* box-shadow: ; */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.proceed_btn:hover{
+  background-color: #CD9D3E;
+  color: white;
+} */
+
+#image{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  /* bottom: 0; */
+  /* border: 2px solid red; */
+}
+.form_content{
+  color: black;
+  position: absolute;
+  line-height: 2;
+  /* display: none; */
+}
+
+#ADD_form{
+  width: 50%;
+  margin-top: 2%;
+  left: 50%;
+}
+
+#TOKIMONS_form{
+  width: 40%;
+  margin-top: 2%;
+  left: 67%;
+}
+
+.content{
+  position:absolute;
+  color: black;
+  /* margin: auto; */
+  /* display: none; */
+  padding: 0.1%;
+  /* text-align: center; */
+  text-overflow: clip;
+  word-wrap: break-word;
+  /* bottom: 0px; */
+  margin-top: 5%;
+  margin-left: 3.5%;
+  border-style: solid;
+  border-radius: 5%;
+
+}
+/* 
+.option_content{
+  color: black;
+  
+  padding: 0.1%;
+  
+  width: 70%;
+  
+} */
+
+#outer_content{
+  /* position: absolute; */
+  /* width:100%;
+  height: 100%; */
+  /* text-align: center; */
+}
+#ADD {background-color:#CD3E3E;}
+#ADD_tab {background-color:#CD3E3E;}
+/* #REMOVE {background-color:#81C43F;} */
+/* #INFO {background-color:#3E7CCD;} */
+/* #TOKIMONS {background-color:#CD9D3E;} */
+#ADD_content {
+  border-color:#CD3E3E;
+  width: 40%;
+  height: 55%;
+}
+/* #REMOVE_content {border-color:#81C43F;} */
+/* #INFO_content {border-color:#3E7CCD;} */
+/* #TOKIMONS_content {
+  border-color:#CD9D3E;
+  overflow-y: scroll;
+  width: 60%;
+  height: 55%;
+} */
+
+#toki_change{
+  display: none;
+}
+/* .outer{
+
+  margin-top: 12%;
+  margin-left: 24%;
+  margin-right: 24%;
+
+  text-align: center;
+}
+.add {
+
+  top: 30%;
+
+  background-image: url(moon.png);
+  background-position: center;
+  background-size: 163px;
+  background-color: white;
+  display:block;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 4px solid #E8E23D;
+}
+.add:hover{
+  background-image: url(add_tokki.png);
+  background-size: 150px;
+}
+
+.word{
+
+  display: inline-block;
+}
+
+.remove {
+
+  top: 30%;
+
+  background-image: url(moon.png);
+  background-position: center;
+  background-size: 163px;
+  display:block;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 4px solid #E8E23D;
+}
+.remove:hover{
+  background-image: url(can.png);
+  background-size: 150px;
+}
+.info{
+  top: 30%;
+
+  background-image: url(moon.png);
+  background-position: center;
+  background-size: 163px;
+  display:block;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 4px solid #E8E23D;
+}
+.info:hover{
+  background-image: url(info_tokki.png);
+  background-size: 155px;
+}
+.tokimons{
+  top: 30%;
+  background-image: url(moon.png);
+  background-position: center;
+  background-size: 163px;
+  display:block;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 4px solid #E8E23D;
+}
+.tokimons:hover{
+  background-image: url(moon_tokki.png);
+  background-size: auto;
+} */
